@@ -1,5 +1,5 @@
 from PIL import Image
-
+import os
 #Define Variables
 key = "abcdefghijklmnopqrstuvwxyz" #Key for naming variables
 ConvertedList = []
@@ -7,9 +7,14 @@ Values = []
 VarKey = {}
 FinalOutput = []
 vars = ""
+#Inputs
+file = str(input("Please type-in your image name with extension (example: flower.png): "))
 
+while not os.path.exists(file):
+    print("Selected File does not exist!")
+    file = str(input("Please type-in your image name with extension (example: flower.png): "))
 #Image stuff
-im = Image.open('picture.png').convert("RGB")
+im = Image.open(file).convert("RGB")
 pix = im.load()
 width,height = im.size
 
@@ -38,6 +43,8 @@ for i in ConvertedList:
     FinalOutput.append(VarKey.get(str(i)))
     
 #Print everything
+print("")
+print("Generated succesfully!" + "\n")
 print("#Colors")
 print(vars)
 print("#Picture")
