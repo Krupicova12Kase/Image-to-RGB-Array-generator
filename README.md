@@ -4,6 +4,13 @@ Simple tool for generating arrays with RGB data from an image. Made for [Astro p
 
 ## How to use
 
+### Python instalation
+
+1. Install [Python](https://www.python.org/downloads/)
+2. Install [PIL library](https://pillow.readthedocs.io/en/stable/installation/basic-installation.html)
+
+### Program usage
+
 1. Download main.py
 2. Place your image **in the same folder as main.py**
 3. Run main.py
