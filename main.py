@@ -40,8 +40,9 @@ for file in os.listdir(os.path.dirname(os.path.abspath(__file__))):
         x = 0
         for i in ConvertedList:
             FinalOutput.append(VarKey.get(str(i)))
-            
-        print("")
-        print(f"[{(', ').join(FinalOutput)}]")
+
+        print(f"image = [{(', ').join(FinalOutput)}]")
+        print("sense.set_pixels(image)")
+        print("sleep(2)")
 for i in VarKey:
     print(f"{VarKey[i]} = {i}")
