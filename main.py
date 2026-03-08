@@ -3,15 +3,7 @@ import os
 #Define Variables
 key = "abcdefghijklmnopqrstuvwxyz" #Key for naming variables
 VarKey = {}
-#Inputs
-"""
-file = str(input("Please type-in your image name with extension (example: flower.png): "))
 
-while not os.path.exists(file):
-    print("Selected File does not exist!")
-    file = str(input("Please type-in your image name with extension (example: flower.png): "))
-#Image stuff
-"""
 for file in os.listdir(os.path.dirname(os.path.abspath(__file__))):
     ConvertedList = []
     Values = []
@@ -48,9 +40,7 @@ for file in os.listdir(os.path.dirname(os.path.abspath(__file__))):
         x = 0
         for i in ConvertedList:
             FinalOutput.append(VarKey.get(str(i)))
-        #print(VarKey)
-        #Print everything
-        #print(str(filename))
+            
         print("")
         print(f"[{(', ').join(FinalOutput)}]")
 for i in VarKey:
